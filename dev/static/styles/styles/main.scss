@@ -1,0 +1,6 @@
+@use '../helpers/_colors.scss' as colors;
+
+body {
+	background-color: colors.$main-background-dark;
+	color: colors.$white;
+}

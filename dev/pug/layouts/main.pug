@@ -1,0 +1,26 @@
+block mixins
+	include ../mixins/mainMixins.pug
+
+block variables
+	-var title = "CSS tricks";
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="description" content="a project that contains different CSS tricks")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		
+		title #{title.toUpperCase()}
+		link(rel="icon" href="static/images/favicon.ico")
+
+		link(rel="stylesheet" href="static/styles/normalize.css")
+		link(rel="stylesheet" href="static/styles/style.css")
+		link(rel="stylesheet" href="static/styles/main.css")
+		block styles
+
+		script(src="static/scripts/index.js")
+		block scripts
+
+	body 
+		block content
