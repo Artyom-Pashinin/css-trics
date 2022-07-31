@@ -5,8 +5,16 @@ const plumber = require('gulp-plumber');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const typescript = require('gulp-typescript');
-const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const del = require('del');
+
+// / / / / / / / / /
+//  Clean source
+// / / / / / / / / /
+
+function clean(){
+     return del(['public/**', '!public'], {force:true});
+}
 
 // / / / / / / / / /
 //     Markup
@@ -65,21 +73,39 @@ function ts2js() {
 		.pipe(gulp.dest('public/static/scripts'));
 }
 
-function jsLibs() {
-	return gulp.src([
-		// 'node_modules/svg4everybody/dist/svg4everybody.js',
-		// 'node_modules/lodash.clonedeep/index.js'
-	])
-		.pipe(concat('libs.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('public/static/scripts/libs/'));
+// / / / / / / / / /
+//    Images
+// / / / / / / / / /
+
+function copyImages() {
+	return gulp.src('dev/static/images/**/*.*')
+		.pipe(gulp.dest('public/static/images/'));
 }
 
-exports.default = gulp.series(
+// / / / / / / / / /
+//    Auto-refresh
+// / / / / / / / / /
+
+function watch() {
+	gulp.watch("dev/pug/**/*.pug", pug2html)
+	gulp.watch("dev/static/styles/**/*.scss", scss2scc)
+}
+
+// / / / / / / / / /
+//    Gulp build
+// / / / / / / / / /
+
+const devTasks = gulp.parallel(
 	pug2html,
 	copyNormalizeCSS,
 	scss2scc,
 	copyScripts,
 	ts2js,
-	// jsLibs,
+	copyImages,
+)
+
+exports.default = gulp.series(
+	clean,
+	devTasks,
+	watch,
 )

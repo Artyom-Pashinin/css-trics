@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="description" content="a project that contains different CSS tricks">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS TRICKS</title>
+    <title>NEON MENU</title>
     <link rel="icon" href="static/images/favicon.ico">
     <link rel="stylesheet" href="static/styles/normalize.css">
     <link rel="stylesheet" href="static/styles/style.css">
     <link rel="stylesheet" href="static/styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="static/styles/neonMenu.css">
     <script src="static/scripts/index.js"></script>
   </head>
   <body> 
-    <ul class="neon-menu">
-      <li class="neon-menu__item1"><a href="#" data-text="&amp;nbsp;Home">&nbsp;Home&nbsp;</a></li>
-      <li class="neon-menu__item2"><a href="#" data-text="&amp;nbsp;About">&nbsp;About&nbsp;</a></li>
-      <li class="neon-menu__item3"><a href="#" data-text="&amp;nbsp;Services">&nbsp;Services&nbsp;</a></li>
-      <li class="neon-menu__item4"><a href="#" data-text="&amp;nbsp;Contacts">&nbsp;Contacts&nbsp;</a></li>
-    </ul>
+    <div class="home-link"> <i class="material-icons">home</i><span>&nbsp;</span><a class="mainLink" href="index.html">Back</a></div>
+    <div class="wrapper">
+      <ul class="neon-menu">
+        <li class="neon-menu__item color1" style="--color:#fcba03"><a href="#" data-text="Home">&nbsp;Home&nbsp;</a></li>
+        <li class="neon-menu__item color2" style="--color:#1cfc03"><a href="#" data-text="About">&nbsp;About&nbsp;</a></li>
+        <li class="neon-menu__item color3" style="--color:#0330fc"><a href="#" data-text="Services">&nbsp;Services&nbsp;</a></li>
+        <li class="neon-menu__item color4" style="--color:#03e3fc"><a href="#" data-text="Contacts">&nbsp;Contacts&nbsp;</a></li>
+      </ul>
+    </div>
   </body>
 </html>

@@ -1,16 +1,13 @@
 extends ../layouts/main.pug
 
-block variables 
-	-var title = "Index title";
-
 block styles 
 	link(rel="stylesheet" href="static/styles/index.css")
 
 block content
 	.tiles
 		.tiles__tile
-			a(href="neonMenu.html") Neon Menu
+			a.mainLink(href="neonMenu.html") Neon Menu
 		.tiles__tile
-			a(href="#") item 2
+			a.mainLink(href="#") item 2
 		.tiles__tile
-			a(href="#") item 3
+			a.mainLink(href="#") item 3

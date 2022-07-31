@@ -1,18 +1,22 @@
 extends ../layouts/main.pug
 
-//- block variables
+block variables
+	-var title = "Neon Menu";
 
 block styles 
 	link(rel="stylesheet", href="static/styles/neonMenu.css")
-block scripts 
 
 block content 
-	ul.neon-menu
-		li.neon-menu__item1
-			a(href="#" data-text="&nbsp;Home") &nbsp;Home&nbsp;
-		li.neon-menu__item2
-			a(href="#" data-text="&nbsp;About") &nbsp;About&nbsp;
-		li.neon-menu__item3
-			a(href="#" data-text="&nbsp;Services") &nbsp;Services&nbsp;
-		li.neon-menu__item4
-			a(href="#" data-text="&nbsp;Contacts") &nbsp;Contacts&nbsp;
+
+	include ../modules/homeLink.pug
+
+	.wrapper
+		ul.neon-menu
+			li.neon-menu__item.color1(style="--color:#fcba03")
+				a(href="#" data-text="Home") &nbsp;Home&nbsp;
+			li.neon-menu__item.color2(style="--color:#1cfc03")
+				a(href="#" data-text="About") &nbsp;About&nbsp;
+			li.neon-menu__item.color3(style="--color:#0330fc")
+				a(href="#" data-text="Services") &nbsp;Services&nbsp;
+			li.neon-menu__item.color4(style="--color:#03e3fc")
+				a(href="#" data-text="Contacts") &nbsp;Contacts&nbsp;

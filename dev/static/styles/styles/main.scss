@@ -3,5 +3,40 @@
 body {
 	background-color: colors.$main-background-dark;
 	color: colors.$white;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
+a.mainLink {
+	color: colors.$white;
+	text-decoration: none;
+	position: relative;
+}
+a.mainLink:visited {
+	color: colors.$white;
+}
+a.mainLink::before {
+	content: "";
+	position: absolute;
+	border-bottom: 2px solid colors.$white;
+	bottom: 0;
+	width: 0;
+	right: 0;
+	transition: 0.2s;
+}
+a.mainLink:hover::before {
+	width: 100%;
+	transform: scaleX(1);
+	left: 0;
+}
+
+
+.home-link {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 10px;
+
+	& a {
+		font-size: 20px;
+	}
+}
