@@ -1,0 +1,17 @@
+extends ../layouts/main.pug
+
+block variables
+	-var title = "Horizontal Split";
+
+block styles 
+	link(rel="stylesheet", href="static/styles/horisontalSplit.css")
+
+block content 
+
+	include ../modules/homeLink.pug
+
+	.horizontal-split__wrapper
+		h2.horizontal-split__title Believe
+			span Believe 
+			span Believe
+			span in yourself
