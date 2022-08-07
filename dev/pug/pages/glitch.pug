@@ -1,0 +1,14 @@
+extends ../layouts/main.pug
+
+block variables
+	-var title = "Glitch";
+
+block styles 
+	link(rel="stylesheet", href="static/styles/glitch.css")
+
+block content 
+
+	include ../modules/homeLink.pug
+
+	.glitch__wrapper
+		a.glitch__link(href="#") Glitch button
