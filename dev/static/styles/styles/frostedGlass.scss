@@ -1,0 +1,43 @@
+@import '../helpers/_colors.scss';
+
+.content {
+  width: 340px;
+  height: 550px;
+  background-image: url("../images/backgrounds/frostedGlass_background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(34, 43, 34, 0.508);
+  background-blend-mode: darken;
+  background-size: cover;
+  position: relative;
+  color: $white;
+}
+
+.player {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  padding: 20px;
+  inset: 50px;
+  border-radius: 15px;
+  border: 1px solid $white;
+}
+
+.frosted-background {
+  background-color: $transparent-white;
+  backdrop-filter: blur(5px);
+}
+
+.album-cover {
+  width: 200px;
+  height: 200px;
+  background-image: url("../images/backgrounds/frostedGlass_background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  border: 1px solid $pale-black;
+}
