@@ -1,5 +1,7 @@
 @import '../helpers/_colors.scss';
 
+$song-progress-percent: 45%; 
+
 .content {
   width: 340px;
   height: 550px;
@@ -11,6 +13,7 @@
   background-size: cover;
   position: relative;
   color: $white;
+  font-size: 1rem;
 }
 
 .player {
@@ -18,12 +21,16 @@
   height: max-content;
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: absolute;
   padding: 20px;
   inset: 50px;
   border-radius: 15px;
   border: 1px solid $white;
+
+  p {
+    margin-block: 5px;
+    line-height: 18px;
+  }
 }
 
 .frosted-background {
@@ -40,4 +47,64 @@
   background-size: cover;
   border-radius: 10px;
   border: 1px solid $pale-black;
+  margin-bottom: 15px;
+}
+
+.song-name {
+  font-size: 1.2rem;
+  line-height: 1.25rem;
+}
+.artist-name {
+  font-size: 0.9rem;
+  color: $mid-white;
+}
+.song-scroll {
+  border-bottom: 3px solid $pale-white;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+  }
+
+  &::before {
+    width: $song-progress-percent;
+    height: 100%;
+    inset: 0;
+    border-bottom: 3px solid $white;;
+  }
+
+  &::after {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: $white;
+    left: $song-progress-percent;
+    bottom: -4px;
+  }
+}
+
+.current-time,
+.total-time {
+  font-size: 0.75rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-block-start: 10px;
+
+  .material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48;
+    font-size: 2rem;
+  }
 }

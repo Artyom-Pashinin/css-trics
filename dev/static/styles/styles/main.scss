@@ -1,23 +1,23 @@
-@use '../helpers/_colors.scss' as colors;
+@import '../helpers/_colors.scss';
 
 body {
-	background-color: colors.$main-background-dark;
-	color: colors.$white;
+	background-color: $main-background-dark;
+	color: $white;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
 a.mainLink {
-	color: colors.$white;
+	color: $white;
 	text-decoration: none;
 	position: relative;
 }
 a.mainLink:visited {
-	color: colors.$white;
+	color: $white;
 }
 a.mainLink::before {
 	content: "";
 	position: absolute;
-	border-bottom: 2px solid colors.$white;
+	border-bottom: 2px solid $white;
 	bottom: 0;
 	width: 0;
 	right: 0;
