@@ -106,6 +106,6 @@ const devTasks = gulp.parallel(
 
 exports.default = gulp.series(
 	clean,
-	// devTasks,
-	// watch,
+	devTasks,
+	watch,
 )
