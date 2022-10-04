@@ -29,10 +29,10 @@
 			li::before {
 				font-family: "FontAwesome";
 				position: absolute;
-				top: -7px;
+				top: -19px;
 				left: 0;
 				font-size: 6em;
-				height: 0;
+				height: 16px;
 				overflow: hidden;
 				transition: 0.5s ease-in-out;
 			}
@@ -65,7 +65,7 @@
 			}
 
 			li:hover::before {
-				height: 110%;
+				height: 120%;
 			}
 		}
 	}
