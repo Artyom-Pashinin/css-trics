@@ -259,5 +259,11 @@ textarea {
   h3 {
     page-break-after: avoid;
   }
+
+  p {
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
 }
 
