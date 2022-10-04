@@ -1,0 +1,26 @@
+extends ../layouts/main.pug
+
+block variables
+	-var title = "Frosted Glass";
+
+block styles 
+	link(rel="stylesheet", href="static/styles/frostedGlass.css")
+	link(rel="stylesheet" href="static/styles/common.css")
+
+block content 
+
+	include ../modules/homeLink.pug
+
+	.wrapper
+		.content
+			.player.frosted-background
+				.album-cover 
+				p.song-name Take On Me
+				p.artist-name a-ha
+				.song_scroll 
+					span.current-time 1:45
+					span.total-time 3:14
+				.buttons 
+					.previous prev
+					.play play
+					.next next
