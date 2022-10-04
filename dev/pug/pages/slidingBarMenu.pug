@@ -1,0 +1,24 @@
+extends ../layouts/main.pug
+
+block variables
+	-var title = "Sliding bar";
+
+block styles 
+	link(rel="stylesheet", href="static/styles/slidingBarMenu.css")
+
+block content 
+
+	include ../modules/homeLink.pug
+
+	.sliding-bar__wrapper
+		.sliding-bar__tabs 
+			input(type="radio" id="radio-1" name="tabs" checked)
+			label(for="radio-1").sliding-bar__tab Home 
+			
+			input(type="radio" id="radio-2" name="tabs")
+			label(for="radio-2").sliding-bar__tab About 
+			
+			input(type="radio" id="radio-3" name="tabs")
+			label(for="radio-3").sliding-bar__tab Contact 
+			
+			span.sliding-bar__glider
