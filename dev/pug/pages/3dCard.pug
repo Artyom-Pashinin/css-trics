@@ -1,0 +1,15 @@
+extends ../layouts/main.pug
+
+block variables
+	-var title = "3D Card";
+
+block styles 
+	link(rel="stylesheet", href="static/styles/3dCard.css")
+	link(rel="stylesheet" href="static/styles/common.css")
+
+block content 
+
+	include ../modules/homeLink.pug
+
+	.wrapper
+		.3d-card 3D Card
