@@ -1,3 +1,5 @@
+@import '../helpers/_colors.scss';
+
 .sliding-bar {
 
 	&__wrapper {
@@ -9,9 +11,8 @@
 	&__tabs {
 		display: flex;
 		padding: 1em;
-		background-color: #f9e6e6;
+		background-color: $green4;
 		border-radius: 3em;
-		box-shadow: 0 6px 12px 0 rgba(255, 202, 202, 0.805)
 	}
 
 	&__tabs * {
@@ -43,18 +44,18 @@ input[type=radio] {
 }
 
 input[type=radio]:checked+label {
-	color: #4786cf;
+	color: $green0;
 }
 
-input[id=radio-1]:checked~.glider {
+input[id=radio-1]:checked~.sliding-bar__glider {
 	transform: translateX(0);
 }
 
-input[id=radio-2]:checked~.glider {
+input[id=radio-2]:checked~.sliding-bar__glider {
 	transform: translateX(100%);
 }
 
-input[id=radio-3]:checked~.glider {
+input[id=radio-3]:checked~.sliding-bar__glider {
 	transform: translateX(200%);
 }
 	
@@ -64,7 +65,7 @@ input[id=radio-3]:checked~.glider {
 	z-index: 1;
 	height: 54px;
 	width: 200px;
-	background-color: #ffffff;
+	background-color: $white;
 	border-radius: 99px;
 	transition: 0.25s ease-out;
 }
