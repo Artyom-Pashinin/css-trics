@@ -1,0 +1,42 @@
+extends ../layouts/main.pug
+
+block variables
+	-var title = "Flex vs Grid";
+
+block styles 
+	link(rel="stylesheet", href="static/styles/flexgrid.css")
+	link(rel="stylesheet" href="static/styles/common.css")
+
+block content 
+
+	include ../modules/homeLink.pug
+
+	.wrapper
+		.container 
+			h2.container__title Flexbox
+			h2.container__title Grid
+			.container__block
+				.flex__body
+					each val in [1, 2, 3, 4, 5, 6] 
+						.flex__item= val
+					.flex__item 77777777777<br>77
+			.container__block
+				//- 1
+				//- .grid__body
+				//- 	//- .grid__item Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam hic illum iusto nulla ab repellendus, doloribus itaque explicabo ipsam. Perferendis nihil quam cum eos hic tempora optio vitae omnis similique!
+				//- 	each val in [1, 2, 3, 4, 5, 6] 
+				//- 		.grid__item= val
+
+				//- 2
+				//- .grid__body
+				//- 	header.grid__item.grid__item--header Header 
+				//- 	aside.grid__item.grid__item--aside Sidebar
+				//- 	main.grid__item.grid__item--main MainText
+
+				//- 3
+				.grid__body
+					.grid__item 0
+					each val in [1, 2, 3, 4, 5, 6, 7, 8] 
+						.grid__item= val
+
+			
